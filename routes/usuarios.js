@@ -15,7 +15,6 @@ router.put('/:id',[
     check('id', 'No es un ID válido').isMongoId(),
     check('id').custom( existeUsuarioPorId ),
     check('rol').optional().custom( esRoleValido ),
-
     validarCampos,
 ],usuariosPut);
 
